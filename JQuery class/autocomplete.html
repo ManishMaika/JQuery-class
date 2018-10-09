@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+    
+      
+  
+   </head>
+   
+   <body>
+    
+      <div class = "ui-widget">  
+         <label for = "tags">Tags: </label>
+         <input id = "tags">
+      </div>
+       
+   </body>
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        
+         $(function() {
+            var availableTutorials  =  [
+               "ActionScript",
+               "Bootstrap",
+               "C",
+               "C++",
+               "Ecommerce",
+               "Jquery",
+               "Groovy",
+               "Java",
+               "JavaScript",
+               "Lua",
+               "Perl",
+               "Ruby",
+               "Scala",
+               "Swing",
+               "XHTML"
+            ];
+            $( "#tags" ).autocomplete({
+               minLength:1,   
+               delay:500, 
+               source: availableTutorials,
+               autoFocus:true
+            });
+         });
+        
+    </script>
+    
+    
+</html> 
